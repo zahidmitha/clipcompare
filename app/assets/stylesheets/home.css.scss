@@ -1,0 +1,106 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.layout_styles {
+	background-color: whiteSmoke;
+}
+
+ul {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 4%;
+    padding-right: 54%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    list-style: none;
+    float: left;
+    background-color: #FF3300;
+
+}
+
+ul li {
+    float: left;
+    display: inline; /*For ignore double margin in IE6*/
+    margin: 0 10px;
+    color: white;
+}
+
+ul li a {
+    text-decoration: none;
+    float:left;
+    color: whiteSmoke;
+    cursor: pointer;
+    font: 900 14px/22px "Arial", Helvetica, sans-serif;
+    margin: 0 10px 0 -10px;
+    padding: 3px 8px 3px 18px;
+    position: relative; /*To fix IE6 problem (not displaying)*/
+    float:left;
+}
+
+ul li a:hover {
+    color: #FF840D;
+    text-decoration: none;
+}
+
+
+
+#front_page_video {
+ margin-right: 20px;
+}
+
+.front_page_header {
+    color: #E8580C;
+
+}
+
+.front_page_votes {
+    margin-top: 5%;
+    margin-right: 35%;
+    font-weight: bold;
+    font-size: 25px;
+    color: #FF840D;
+
+}
+
+.next_button  {
+
+
+}
+
+.next_button_styles {
+    background-color: #FF3300;
+    background-image: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 0%;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    margin-left: 42%;
+    margin-bottom: 2%;
+
+}
+
+.next_button_styles:hover {
+    background-color: #FF840D;
+    color: white;
+}
+
+.vote_button {
+    background-color: #FF840D;
+    background-image: none;
+    color: white;
+    boxx-shadow: none;
+
+}
+
+.vote_button:hover {
+    background-color: #E8180C;
+    color: white;
+}

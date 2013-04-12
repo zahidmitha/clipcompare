@@ -1,0 +1,35 @@
+<div class="container">
+<h1 class="front_page_header">Clip<span style="color: #FF840D;">Compare</span></h1>
+
+<p><strong> Let's settle this.</strong> What's the most iconic movie clip of all time?</p>
+
+<div class="next_button">
+<%= link_to 'Shuffle', home_index_path, class: "btn next_button_styles"  %>
+</div>
+
+<div>
+<% @video_pair.each do |video| %>
+
+
+	<iframe width="560" height="315" id="front_page_video" src="http://www.youtube.com/embed/<%= video.video %>" frameborder="0" allowfullscreen></iframe>
+
+<% end %>
+
+<% @video_pair.each do |video| %>
+
+
+<span class="front_page_votes">
+
+
+
+<%= video.votes %> votes
+
+	<%= link_to 'Vote up', "/videos/#{video.id}/add_vote", method: :put, class: "btn vote_button" %>
+</span>
+<% end %>
+
+</div>
+
+
+
+</div>

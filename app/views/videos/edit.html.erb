@@ -1,0 +1,18 @@
+<h2>Edit video upload</h2>
+<%= form_for @video do |f| %>
+
+	<div>
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.label :video %>
+
+	</div>
+
+
+
+
+<%= link_to 'Home', home_index_path %><br />
+<%= link_to 'List of videos', videos_path %><br />
+<%= link_to 'View this video', video_path %>

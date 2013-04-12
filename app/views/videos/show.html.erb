@@ -1,0 +1,53 @@
+<div class="container">
+<div id="notice"><%= notice %></div>
+
+<div>
+	<strong><%= @video.name %></strong>
+</div>
+
+<div>
+	<iframe width="560" height="315" src="http://www.youtube.com/embed/<%= @video.video %>" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div>
+
+	<%= @video.votes %> <strong>votes</strong>
+	<div>
+	<%= link_to 'Vote up', "/videos/#{@video.id}/add_vote", method: :put, class: "btn vote_button" %>
+	</div>
+</div>
+
+<% if @video.comments.blank? %>
+
+	<h3>Comments</h3>
+	<% @video.comments.each do |comment| %>
+		<p>
+			<strong>Commenter</strong><br />
+			<%= comment.commenter %>
+		</p>
+		<p>
+			<strong>Comment</strong>
+			<%= comment.body %>
+		</p>
+
+		<%= link_to 'Delete comment', [comment.video, comment],:confirm => 'Are you sure?', :method => :delete %>
+	<% end %>
+
+<% else %>
+
+<% end %>
+
+<h3>Add a comment</h3>
+<%= form_for([@video, @video.comments.build]) do |f| %>
+	<div>
+		<%= f.label :commenter %><br />
+		<%= f.text_field :commenter %>
+	</div>
+	<div>
+		<%= f.label "Comment" %><br />
+		<%= f.text_area :body %>
+	</div>
+		<%= f.submit %>
+<% end %>
+
+</div>

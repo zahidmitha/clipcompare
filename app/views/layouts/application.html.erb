@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ClipCompare.com</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="layout_styles">
+
+<ul>
+    <li><a href="/home/index"><span>ClipCompare</span></a></li>
+    <li><span><%= link_to "Home", home_index_path %></span></li>
+    <li><span><%= link_to "Rankings", videos_path %></span></li>
+    <li><a href="#" title="blog"><span>About</span></a></li>
+    <li><span><%= link_to "Add video", new_video_path %></span></li>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

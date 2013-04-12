@@ -1,0 +1,12 @@
+<div class="container">
+<%= form_for(@video) do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %><br />
+
+	<%= f.label "Video embed code" %>
+	<%= f.text_field :video %><br />
+
+	<%= f.submit %>
+<% end %>
+
+</div>
