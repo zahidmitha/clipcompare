@@ -8,6 +8,8 @@ VideoSite::Application.routes.draw do
 
   put "videos/:id/add_vote" => "videos#add_vote"
 
+  get "home/about" => "home#about"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
