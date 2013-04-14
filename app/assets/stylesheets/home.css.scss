@@ -5,40 +5,30 @@
 
 .layout_styles {
 	background-color: whiteSmoke;
+    margin: 0;
+    padding: 0;
 }
-
 ul {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 4%;
-    padding-right: 54%;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-    list-style: none;
-    float: left;
-    background-color: #FF3300;
-
+  margin: 0 0 10px 0;
+  list-style: none;
+  background-color: #FF3300;
+  display: block;
+  width: 100%;
 }
 
 ul li {
-    float: left;
-    display: inline; /*For ignore double margin in IE6*/
-    margin: 0 10px;
-    color: white;
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
 }
 
 ul li a {
-    text-decoration: none;
-    float:left;
-    color: whiteSmoke;
-    cursor: pointer;
-    font: 900 14px/22px "Arial", Helvetica, sans-serif;
-    margin: 0 10px 0 -10px;
-    padding: 3px 8px 3px 18px;
-    position: relative; /*To fix IE6 problem (not displaying)*/
-    float:left;
+  text-decoration: none;
+  color: whiteSmoke;
+  font: 900 14px/22px "Arial", Helvetica, sans-serif;
+  padding: 10px;
+  display: block;
+cursor: pointer;
 }
 
 ul li a:hover {
