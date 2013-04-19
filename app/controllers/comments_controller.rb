@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+  before_filter :authorize, only:[:create, :destroy]
+
   def create
     @video = Video.find(params[:video_id])
     # @comment = @video.comments.create!({body: params[:comment][:body], commenter: params[:comment][:commenter]})

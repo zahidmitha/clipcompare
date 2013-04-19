@@ -42,21 +42,21 @@
     <li><span><%= link_to "Add video", new_video_path %></span></li>
 </ul>
 
-<!-- <div id="user_nav">
-  <%# if current_user %>
-    Logged in as <%#= current_user.email %>
-    <%# link_to "Log out", log_out_path %>
-  <%# else %>
-    <%# link_to "Sign up", sign_up_path %> or
-    <%# link_to "Log in", log_in_path %>
-  <%# end %>
-</div> -->
-
-<%# flash.each do |name, msg| %>
-  <%#= content_tag :div, msg, :id => "flash_#{name}" %>
-<%# end %>
+<div class="container">
+  <div id="user_header">
+    <% if current_user %>
+      Logged in as <% current_user.email %>
+    <%= link_to "Log out", logout_path %>
+    <% else %>
+      <%= link_to "Sign up", signup_path %> or
+      <%= link_to "Log in", login_path %>
+    <% end %>
+  </div>
+</div>
 
 <%= yield %>
+
+
 
 </body>
 </html>
