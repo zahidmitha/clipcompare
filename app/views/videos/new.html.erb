@@ -1,3 +1,13 @@
+<script type="text/javascript">
+
+$(document).ready (function() {
+	mixpanel.track("Add video page visited");
+});
+
+
+</script>
+
+
 <div class="container">
 <%= form_for(@video) do |f| %>
 	<%= f.label :name %>
